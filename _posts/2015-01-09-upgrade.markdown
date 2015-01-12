@@ -9,38 +9,41 @@ title: 外呼营销平台升级备注
 ####运营端
 
 1. 创建代理商表结构，sql代码如下：
-        DROP TABLE IF EXISTS t_agent; 
-        CREATE TABLE t_agent
-        (
-        id numeric(20) primary key,
-        acc_password varchar(64),
-        account varchar(64),
-        address varchar(255),
-        balance varchar(32),
-        contacts varchar(32),
-        created_at timestamp,
-        creator_id numeric(20),
-        email varchar(64),
-        if_use int,
-        name varchar(64),
-        operator_id numeric(20),
-        overdraw_balance varchar(32),
-        phone varchar(32),
-        status varchar(32),
-        updated_at timestamp,
-        uuid varchar(255),
-        audit_reason varchar(1000),
-        audited_at timestamp,
-        auditor numeric(20),
-        submitted_at timestamp,
-        is_lock int,
-        agent_code varchar(255),
-        city_id numeric(20),
-        province_id numeric(20),
-        min_rate_price varchar(32),
-        parent_agent_id numeric(20),
-        rented_at varchar(32)
-        );
+
+{% highlight ruby %}
+DROP TABLE IF EXISTS t_agent; 
+CREATE TABLE t_agent
+(
+id numeric(20) primary key,
+acc_password varchar(64),
+account varchar(64),
+address varchar(255),
+balance varchar(32),
+contacts varchar(32),
+created_at timestamp,
+creator_id numeric(20),
+email varchar(64),
+if_use int,
+name varchar(64),
+operator_id numeric(20),
+overdraw_balance varchar(32),
+phone varchar(32),
+status varchar(32),
+updated_at timestamp,
+uuid varchar(255),
+audit_reason varchar(1000),
+audited_at timestamp,
+auditor numeric(20),
+submitted_at timestamp,
+is_lock int,
+agent_code varchar(255),
+city_id numeric(20),
+province_id numeric(20),
+min_rate_price varchar(32),
+parent_agent_id numeric(20),
+rented_at varchar(32)
+);
+{% endhighlight %}
 2. 创建代理商分配角色表结构，sql语句如下：
 ```
 DROP TABLE if EXISTS t_agent_assign_role;

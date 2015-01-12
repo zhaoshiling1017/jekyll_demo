@@ -11,39 +11,43 @@
 <h4 id="section-1">运营端</h4>
 
 <ol>
-  <li>创建代理商表结构，sql代码如下：
-     DROP TABLE IF EXISTS t_agent; 
-     CREATE TABLE t_agent
-     (
-     id numeric(20) primary key,
-     acc_password varchar(64),
-     account varchar(64),
-     address varchar(255),
-     balance varchar(32),
-     contacts varchar(32),
-     created_at timestamp,
-     creator_id numeric(20),
-     email varchar(64),
-     if_use int,
-     name varchar(64),
-     operator_id numeric(20),
-     overdraw_balance varchar(32),
-     phone varchar(32),
-     status varchar(32),
-     updated_at timestamp,
-     uuid varchar(255),
-     audit_reason varchar(1000),
-     audited_at timestamp,
-     auditor numeric(20),
-     submitted_at timestamp,
-     is_lock int,
-     agent_code varchar(255),
-     city_id numeric(20),
-     province_id numeric(20),
-     min_rate_price varchar(32),
-     parent_agent_id numeric(20),
-     rented_at varchar(32)
-     );</li>
+  <li>创建代理商表结构，sql代码如下：</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">DROP</span> <span class="no">TABLE</span> <span class="no">IF</span> <span class="no">EXISTS</span> <span class="n">t_agent</span><span class="p">;</span> 
+<span class="no">CREATE</span> <span class="no">TABLE</span> <span class="n">t_agent</span>
+<span class="p">(</span>
+<span class="nb">id</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="n">primary</span> <span class="n">key</span><span class="p">,</span>
+<span class="n">acc_password</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+<span class="n">account</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+<span class="n">address</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">balance</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="n">contacts</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="n">created_at</span> <span class="n">timestamp</span><span class="p">,</span>
+<span class="n">creator_id</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">email</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+<span class="n">if_use</span> <span class="n">int</span><span class="p">,</span>
+<span class="nb">name</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+<span class="n">operator_id</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">overdraw_balance</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="n">phone</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="n">status</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="n">updated_at</span> <span class="n">timestamp</span><span class="p">,</span>
+<span class="n">uuid</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">audit_reason</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span>
+<span class="n">audited_at</span> <span class="n">timestamp</span><span class="p">,</span>
+<span class="n">auditor</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">submitted_at</span> <span class="n">timestamp</span><span class="p">,</span>
+<span class="n">is_lock</span> <span class="n">int</span><span class="p">,</span>
+<span class="n">agent_code</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">city_id</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">province_id</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">min_rate_price</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="n">parent_agent_id</span> <span class="n">numeric</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">rented_at</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="p">);</span></code></pre></div>
+
+<ol>
   <li>
     <p>创建代理商分配角色表结构，sql语句如下：
 <code>
