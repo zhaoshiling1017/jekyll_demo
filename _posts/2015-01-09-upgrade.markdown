@@ -8,8 +8,7 @@ title: 外呼营销平台升级备注
 ####运营端
 
 1.创建代理商表结构，sql代码如下：
-
-{% highlight ruby %}
+```
 DROP TABLE IF EXISTS t_agent; 
 CREATE TABLE t_agent
 (
@@ -42,7 +41,7 @@ creator_id numeric(20),
     parent_agent_id numeric(20),
     rented_at varchar(32)
     );
-{% endhighlight %}
+```
 2.创建代理商分配角色表结构，sql语句如下：
 
 {% highlight ruby %}
